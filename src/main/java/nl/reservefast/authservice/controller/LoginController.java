@@ -22,7 +22,7 @@ import java.util.Optional;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class LoginController {
     private final TokenProvider tokenProvider;
     private final UserService userService;
@@ -58,9 +58,9 @@ public class LoginController {
     }
 
     @GetMapping("/user")
-    public ResponseEntity currentUser(@AuthenticationPrincipal UserDetails userDetails) {
+    public ResponseEntity currentUser(@AuthenticationPrincipal User user) {
         Map<Object, Object> model = new LinkedHashMap<>();
-        model.put("user", userDetails);
+        model.put("user", user);
         return ok(model);
     }
 }

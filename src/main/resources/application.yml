@@ -43,6 +43,6 @@ zuul:
       path: /reserve/**
       service-id: reserve-service
     profile-service:
-      path: /profile/**
-      service-id: profile-service
+      path: /company/**
+      service-id: company-service
   prefix: "/api/"
