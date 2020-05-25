@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/reservefastauth?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/reserveauth?serverTimezone=UTC
     username: root
     password:
     driver-class-name: com.mysql.jdbc.Driver
@@ -38,11 +38,12 @@ eureka:
 
 zuul:
   ignored-services: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
   routes:
     reserve-service:
       path: /reserve/**
       service-id: reserve-service
     profile-service:
-      path: /profile/**
-      service-id: profile-service
+      path: /company/**
+      service-id: company-service
   prefix: "/api/"

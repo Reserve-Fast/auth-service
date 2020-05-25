@@ -22,7 +22,7 @@ import java.util.Optional;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class LoginController {
     private final TokenProvider tokenProvider;
     private final UserService userService;

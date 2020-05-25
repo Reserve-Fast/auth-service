@@ -21,7 +21,7 @@ import java.util.Map;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class RegisterController {
     private final TokenProvider tokenProvider;
     private final UserService userService;
