@@ -46,4 +46,7 @@ zuul:
     profile-service:
       path: /company/**
       service-id: company-service
+    builder-service:
+      path: /builder/**
+      service-id: builder-service
   prefix: "/api/"
