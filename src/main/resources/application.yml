@@ -28,6 +28,8 @@ management:
       enabled: true
     health:
       enabled: true
+    info:
+      enabled: true
 
 eureka:
   instance:
