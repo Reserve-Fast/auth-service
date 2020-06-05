@@ -27,10 +27,11 @@ management:
     routes:
       enabled: true
     health:
-      enabled: false
+      enabled: true
 
 eureka:
   instance:
+    secure
     hostname: https://reservefast-auth.herokuapp.com
     secure-port-enabled: true
     non-secure-port-enabled: false
