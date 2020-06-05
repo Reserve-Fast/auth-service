@@ -18,6 +18,17 @@ spring:
 server:
   port: 9092
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    routes:
+      enabled: true
+    health:
+      enabled: false
+
 eureka:
   instance:
     hostname: https://reservefast-auth.herokuapp.com
