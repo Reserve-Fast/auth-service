@@ -9,6 +9,9 @@ spring:
       ddl-auto: update
     properties:
       hibernate.jdbc.lob.non_contextual-creation: true
+  cloud:
+    discovery:
+      enabled: true
   application:
     name: auth-service
 
@@ -33,7 +36,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: https://reservefast-eureka.herokuapp.com
+      defaultZone: https://reservefast-eureka.herokuapp.com/eureka
 
 zuul:
   ignored-services: '*'
