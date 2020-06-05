@@ -29,7 +29,8 @@ management:
 
 eureka:
   instance:
-    prefer-ip-address: false
+    hostname: https://reservefast-auth.herokuapp.com
+    nonSecurePort: 80
   client:
     healthcheck:
       enabled: true
