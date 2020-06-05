@@ -38,6 +38,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: https://reservefast-eureka.herokuapp.com/eureka
+    register-with-eureka: true
+    fetch-registry: true
 
 zuul:
   ignored-services: '*'
