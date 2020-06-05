@@ -31,10 +31,6 @@ eureka:
   instance:
     hostname: https://reservefast-auth.herokuapp.com
   client:
-    healthcheck:
-      enabled: true
-    registerWithEureka: true
-    fetchRegistry: true
     serviceUrl:
       defaultZone: https://reservefast-eureka.herokuapp.com/eureka
 
