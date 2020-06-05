@@ -31,7 +31,6 @@ management:
 
 eureka:
   instance:
-    hostname: http://reservefast-auth.herokuapp.com/
     secure-port-enabled: true
     non-secure-port-enabled: false
     secure-port: ${server.port}
