@@ -31,7 +31,13 @@ management:
 
 eureka:
   instance:
-    hostname: https://reservefast-auth.herokuapp.com/
+    hostname: https://reservefast-auth.herokuapp.com
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    secure-port: ${server.port}
+    health-check-url: https://${eureka.instance.hostname}:${eureka.instance.secure-port}/actuator/health
+    status-page-url: https://${eureka.instance.hostname}:${eureka.instance.secure-port}/actuator/info
+    home-page-url: https://${eureka.instance.hostname}:${eureka.instance.secure-port}/
   client:
     serviceUrl:
       defaultZone: https://reservefast-eureka.herokuapp.com/eureka
