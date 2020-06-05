@@ -31,7 +31,7 @@ management:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: https://reservefast-auth.herokuapp.com/
   client:
     serviceUrl:
       defaultZone: https://reservefast-eureka.herokuapp.com/eureka
