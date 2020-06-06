@@ -32,7 +32,6 @@ management:
 
 eureka:
   instance:
-    hostname: localhost
     secure-port-enabled: true
     non-secure-port-enabled: false
     secure-port: ${server.port}
@@ -65,3 +64,7 @@ zuul:
       path: /reservation/**
       service-id: reservation-service
   prefix: "/api/"
+
+ribbon:
+  eureka:
+    enabled: false
