@@ -32,7 +32,7 @@ management:
 
 eureka:
   instance:
-    hostname: https://reservefast-eureka.herokuapp.com/eureka
+    hostname: localhost
     secure-port-enabled: true
     non-secure-port-enabled: false
     secure-port: ${server.port}
