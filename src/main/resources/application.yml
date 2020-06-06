@@ -32,12 +32,8 @@ management:
 
 eureka:
   instance:
-    secure-port-enabled: true
-    non-secure-port-enabled: false
-    secure-port: ${server.port}
-    health-check-url: https://reservefast-auth.herokuapp.com/actuator/health
-    home-page-url: https://reservefast-auth.herokuapp.com
-    status-page-url: https://reservefast-auth.herokuapp.com/info
+    non-secure-port: 80
+    hostname: ${DOMAIN_NAME}
   client:
     serviceUrl:
       defaultZone: https://reservefast-eureka.herokuapp.com/eureka
@@ -64,6 +60,10 @@ zuul:
       path: /reservation/**
       service-id: reservation-service
   prefix: "/api/"
+
+company-service:
+  ribbon:
+    listOfServers: https://reservefast-company.herokuapp.com
 
 ribbon:
   eureka:
