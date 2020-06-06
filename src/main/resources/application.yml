@@ -29,9 +29,10 @@ management:
     health:
       enabled: false
 
+
 eureka:
   instance:
-    hostname: localhost
+    hostname: https://reservefast-eureka.herokuapp.com/eureka
     secure-port-enabled: true
     non-secure-port-enabled: false
     secure-port: ${server.port}
@@ -45,13 +46,16 @@ eureka:
     fetch-registry: true
 
 zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
     reserve-service:
       path: /reserve/**
       service-id: reserve-service
-    profile-service:
+    company-service:
       path: /company/**
       service-id: company-service
     builder-service:
