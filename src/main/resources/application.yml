@@ -47,9 +47,6 @@ zuul:
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
   routes:
-    reserve-service:
-      path: /reserve/**
-      service-id: reserve-service
     company-service:
       path: /company/**
       service-id: company-service
@@ -68,6 +65,10 @@ company-service:
 builder-service:
   ribbon:
     listOfServers: https://reservefast-builder.herokuapp.com
+
+reservation-service:
+  ribbon:
+    listOfServers: https://reservefast-reservation.herokuapp.com
 
 hystrix:
   command:
