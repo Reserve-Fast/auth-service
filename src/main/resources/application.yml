@@ -70,6 +70,7 @@ zuul:
       service-id: reservation-service
   prefix: "/api/"
 
+
 company-service:
   ribbon:
     listOfServers: https://reservefast-company.herokuapp.com
@@ -82,3 +83,10 @@ ribbon:
   ReadTimeout: 60000
   eureka:
     enabled: false
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000
