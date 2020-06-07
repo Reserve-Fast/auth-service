@@ -83,10 +83,14 @@ hystrix:
 company-service:
   ribbon:
     listOfServers: https://reservefast-company.herokuapp.com
+    ConnectTimeout: 20000
+    ReadTimeout: 20000
 
 builder-service:
   ribbon:
     listOfServers: https://reservefast-builder.herokuapp.com
+    ConnectTimeout: 20000
+    ReadTimeout: 20000
 
 ribbon:
   ReadTimeout: 60000
