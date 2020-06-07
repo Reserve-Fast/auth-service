@@ -78,7 +78,7 @@ hystrix:
           enabled: false
         isolation:
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 150000
 
 company-service:
   ribbon:
