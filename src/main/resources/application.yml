@@ -70,6 +70,13 @@ zuul:
       service-id: reservation-service
   prefix: "/api/"
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000
 
 company-service:
   ribbon:
