@@ -18,8 +18,6 @@ spring:
 server:
   port: 9092
 
-
-
 management:
   endpoints:
     web:
@@ -30,7 +28,6 @@ management:
       enabled: true
     health:
       enabled: false
-
 
 eureka:
   instance:
@@ -70,36 +67,15 @@ zuul:
       service-id: reservation-service
   prefix: "/api/"
 
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: false
-        isolation:
-          thread:
-            timeoutInMilliseconds: 150000
-
 company-service:
   ribbon:
     listOfServers: https://reservefast-company.herokuapp.com
-    ConnectTimeout: 20000
-    ReadTimeout: 20000
 
 builder-service:
   ribbon:
     listOfServers: https://reservefast-builder.herokuapp.com
-    ConnectTimeout: 20000
-    ReadTimeout: 20000
 
 ribbon:
   ReadTimeout: 60000
   eureka:
     enabled: false
-
-feign:
-  client:
-    config:
-      default:
-        connectTimeout: 160000000
-        readTimeout: 160000000
