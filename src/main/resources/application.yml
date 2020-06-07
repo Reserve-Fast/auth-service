@@ -69,6 +69,16 @@ builder-service:
   ribbon:
     listOfServers: https://reservefast-builder.herokuapp.com
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1100
+
 ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
   eureka:
     enabled: false
