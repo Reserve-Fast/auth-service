@@ -18,6 +18,8 @@ spring:
 server:
   port: 9092
 
+
+
 management:
   endpoints:
     web:
@@ -46,7 +48,10 @@ eureka:
 
 zuul:
   host:
-    connect-timeout-millis: 10000
+    time-to-live: -1
+    connect-timeout-millis: 5000
+    max-per-route-connections: 10000
+    max-total-connections: 5000
     socket-timeout-millis: 60000
   ignored-services: '*'
   sensitiveHeaders: Cookie,Set-Cookie
@@ -74,5 +79,6 @@ builder-service:
     listOfServers: https://reservefast-builder.herokuapp.com
 
 ribbon:
+  ReadTimeout: 60000
   eureka:
     enabled: false
