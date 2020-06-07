@@ -77,7 +77,7 @@ company-service:
 
 builder-service:
   ribbon:
-    listOfServers: https://reservefast-builder.herokuapp.com, https://reservefast-company.herokuapp.com
+    listOfServers: https://reservefast-builder.herokuapp.com
 
 ribbon:
   ReadTimeout: 60000
