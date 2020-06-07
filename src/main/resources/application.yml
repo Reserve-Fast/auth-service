@@ -69,6 +69,10 @@ company-service:
   ribbon:
     listOfServers: https://reservefast-company.herokuapp.com
 
+builder-service:
+  ribbon:
+    listOfServers: https://reservefast-builder.herokuapp.com
+
 ribbon:
   eureka:
     enabled: false
