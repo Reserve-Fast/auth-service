@@ -35,7 +35,7 @@ public class RegisterController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity login(@Valid @RequestBody RegisterModel registerModel) {
+    public ResponseEntity register(@Valid @RequestBody RegisterModel registerModel) {
         if(userService.findByEmail(registerModel.getEmail()).isPresent()) {
             return new ResponseEntity<>(AuthResponse.USER_ALREADY_EXISTS.toString(), HttpStatus.BAD_REQUEST);
         }

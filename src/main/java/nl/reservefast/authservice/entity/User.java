@@ -24,6 +24,8 @@ import java.util.UUID;
 @Setter
 public class User implements Serializable, UserDetails {
 
+    public User() {}
+
     @Id
     @Type(type="uuid-char")
     @GeneratedValue(strategy = GenerationType.AUTO)
